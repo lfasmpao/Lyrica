@@ -22,7 +22,12 @@ Todo List
   - [ ] Music Service Integration :+1:
 
 
-### Development
+Development
+----------
 Want to contribute? Great!
 Lyrica uses Java for development.
 Make a change in your file and instantanously see your updates!
+
+License
+---------
+ [BSD 3-Clause License](https://github.com/lfasmpao/Lyrica/blob/master/LICENSE.md)
