@@ -16,7 +16,7 @@ public class DBHandler extends SQLiteAssetHelper {
     private static final String COLUMN_ARTIST= "artist";
     private static final String COLUMN_LYRICS = "lyrics";
 
-    public DBHandler(Context context){
+    DBHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -36,17 +36,17 @@ public class DBHandler extends SQLiteAssetHelper {
         contentValues.put(COLUMN_TITLE, mutator.getTitle());
         contentValues.put(COLUMN_ARTIST, mutator.getArtist());
         contentValues.put(COLUMN_LYRICS, mutator.getLyrics());
-        db.update(TABLE_NAME, contentValues, COLUMN_ID + "= ?", new String[]{mutator.getID()});
+        db.update(TABLE_NAME, contentValues, COLUMN_ID + "= ?", new String[]{String.valueOf(mutator.getID())});
         db.close();
     }
 
     public void deleteLyrics(Mutator mutator){
         SQLiteDatabase db = this.getReadableDatabase();
-        db.delete(TABLE_NAME, COLUMN_ID + "= ?", new String[]{mutator.getID()});
+        db.delete(TABLE_NAME, COLUMN_ID + "= ?", new String[]{String.valueOf(mutator.getID())});
         db.close();
     }
 
-    public List<Mutator> getAllLyrics(){
+    List<Mutator> getAllLyrics(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
         List<Mutator> accessor = new ArrayList<>();
@@ -55,7 +55,7 @@ public class DBHandler extends SQLiteAssetHelper {
             for (int i = 0; i < cursor.getCount(); i++) {
                 cursor.moveToNext();
                 mutator = new Mutator();
-                mutator.setID(cursor.getString(0));
+                mutator.setID(cursor.getInt(0));
                 mutator.setTitle(cursor.getString(1));
                 mutator.setArtist(cursor.getString(2));
                 mutator.setLyrics(cursor.getString(3));
@@ -68,7 +68,7 @@ public class DBHandler extends SQLiteAssetHelper {
     }
 
 
-    public List<Mutator> getLyrics(String id){
+    List<Mutator> getLyrics(String id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, new String[] {COLUMN_ID, COLUMN_TITLE, COLUMN_LYRICS}, COLUMN_ID + "= ?", new String[]{String.valueOf(id)}, null, null, null);
         List<Mutator> accessor = new ArrayList<>();
@@ -77,7 +77,7 @@ public class DBHandler extends SQLiteAssetHelper {
             for (int i = 0; i < cursor.getCount(); i++) {
                 cursor.moveToNext();
                 mutator = new Mutator();
-                mutator.setID(cursor.getString(0));
+                mutator.setID(cursor.getInt(0));
                 mutator.setTitle(cursor.getString(1));
                 mutator.setLyrics(cursor.getString(2));
                 accessor.add(mutator);
@@ -87,7 +87,7 @@ public class DBHandler extends SQLiteAssetHelper {
         db.close();
         return accessor;
     }
-
+    
     public int getLyricsCount() {
         String countQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();

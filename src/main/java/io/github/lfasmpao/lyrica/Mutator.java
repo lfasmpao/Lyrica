@@ -1,13 +1,14 @@
 package io.github.lfasmpao.lyrica;
 
-public class Mutator {
-    private String ID, title, artist, lyrics;
+class Mutator {
+    private Integer ID;
+    private String title, artist, lyrics;
 
-    public String getID(){
+    Integer getID(){
         return ID;
     }
 
-    public void setID(String ID) {
+    void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -19,19 +20,19 @@ public class Mutator {
         this.title = title;
     }
 
-    public String getLyrics(){
+    String getLyrics(){
         return lyrics;
     }
 
-    public void setLyrics(String lyrics){
+    void setLyrics(String lyrics){
         this.lyrics = lyrics;
     }
 
-    public String getArtist() {
+    String getArtist() {
         return artist;
     }
 
-    public void setArtist(String artist){
+    void setArtist(String artist){
         this.artist = artist;
     }
 

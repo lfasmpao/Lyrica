@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Lyrica</string>
-    <string name="search_hint">Search Title</string>
+    <string name="search_hint">Search for title or artist</string>
     <string name="search_name">Search</string>
-    <string name="title_activity_scrolling">Lyrica</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_about">About</string>
+    <string name="action_tools">Tools</string>
+    <string name="action_credits">Credits</string>
+    <string name="action_github">Fork on GitHub</string>
+    <string name="app_version">Version: 1.0</string>
 </resources>
