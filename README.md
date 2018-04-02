@@ -12,7 +12,7 @@ I recommend using this app:
   
 Download | Release Date
 ------------ | -------------
-[Version 1.0](https://github.com/lfasmpao/Lyrica/releases/download/1.0/app-release-unsigned.apk) | April 3, 2018
+[Version 1.0](https://github.com/lfasmpao/Lyrica/releases/download/1.0/app-debug.apk) | April 3, 2018
 [Pre-release](https://github.com/lfasmpao/Lyrica/releases/download/0.1/app-debug.apk) | March 31, 2018
 
 
