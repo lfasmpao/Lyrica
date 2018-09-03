@@ -1,3 +1,5 @@
+![untitled-7-01](https://user-images.githubusercontent.com/36637989/45000465-02798c00-afbd-11e8-85b5-73ff74514f0d.png)
+
 # :rocket: Lyrica :rocket:
 **An Open Source SQLite Database Lyrics Android Application**
 
