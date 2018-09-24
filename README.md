@@ -31,4 +31,4 @@ Make a change in your file and instantanously see your updates!
 
 License
 ---------
- [BSD 3-Clause License](https://github.com/lfasmpao/Lyrica/blob/master/LICENSE.md)
+ [MIT License](https://github.com/lfasmpao/Lyrica/blob/master/LICENSE.md)
