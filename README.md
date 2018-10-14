@@ -29,6 +29,8 @@ Want to contribute? Great!
 Lyrica uses Java for development.
 Make a change in your file and instantanously see your updates!
 
+Did you find this useful?
+----------
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/A362BEU)
 
 License
